@@ -30,5 +30,4 @@ class UdaciList
       puts "#{position + 1}) #{item.details}"
     end
   end
-
 end

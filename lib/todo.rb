@@ -13,15 +13,20 @@ class TodoItem
       end
     end
   end
+
+  def progress_bar
+    total = 100
+    progress = ProgressBar.new(total, :color => "light_blue")
+    1000.times do
+      progress.increment
+    end
+  end
   
   def details
     format_description(@description) + "due: " +
     format_date(due: @due) + 
-    format_priority(@priority)
+    format_priority(@priority) +
+    progress_bar
   end
   
-  def change_due_date(due_date)
-    @due = Chronic.parse(due_date)
   end
-  
-end
