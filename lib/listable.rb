@@ -24,4 +24,17 @@ module Listable
     return value
   end
 
+  def format_progressBar(current)
+    total = 100
+    progress = Formatador::ProgressBar.new(total, :color => "light_blue")
+    current.to_i.times do
+    progress.increment
+    sleep 0.02
+    end
+  end 
+
+  def linebreak
+    puts ""
+  end
+  
 end
