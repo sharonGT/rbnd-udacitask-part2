@@ -8,11 +8,17 @@ class UdaciList
 
   def add(type, description, options={})
     type = type.downcase
-    @items.push TodoItem.new(description, options) if type == "todo"
-    @items.push EventItem.new(description, options) if type == "event"
-    @items.push LinkItem.new(description, options) if type == "link"
+    case type
+    when "todo"
+    @items.push TodoItem.new(description, options) 
+    when "event"
+    @items.push EventItem.new(description, options) 
+    when "link"
+    @items.push LinkItem.new(description, options) 
+    else
     raise UdaciListErrors::InvalidItemTypeError, "image is not the correct type." if type == "image"
   end
+end
 
   def delete(index)
     if index < 9
@@ -30,4 +36,15 @@ class UdaciList
       puts "#{position + 1}) #{item.details}"
     end
   end
-end
+
+  def filter(type)
+    show_type = @items.select {|item| item.type == type.downcase}
+    show_type.each {|item| puts item.details}
+    show_type
+  end
+
+  def delete_description(description)
+    delete = @items.delete_if {|item| item.description == description}
+    delete
+  end
+  end
