@@ -1,6 +1,7 @@
 class EventItem
   include Listable
   attr_reader :description, :start_date, :end_date, :current
+  @@type = "event"
 
   def initialize(description, options={})
     @description = description
@@ -12,4 +13,9 @@ class EventItem
   def details
     format_description(@description) + "event dates: " + format_date(start_date: @start_date, end_date: @end_date) + linebreak.to_s + format_progressBar(@current).to_s 
   end
+
+  def type
+    @@type
+  end
+  
 end

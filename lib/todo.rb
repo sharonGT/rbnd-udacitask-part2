@@ -1,6 +1,7 @@
 class TodoItem
   include Listable
   attr_reader :description, :due, :priority, :current
+  @@type = "todo"
 
   def initialize(description, options={})
     @description = description
@@ -15,19 +16,6 @@ class TodoItem
     end
   end
 
-  
-  def format_progressBar(current)
-    total = 100
-    progress = Formatador::ProgressBar.new(total, :color => "light_blue")
-    current.to_i.times do
-    progress.increment
-    sleep 0.02
-    end
-  end 
-
-  def linebreak
-    puts ""
-  end
 
   def details
     format_description(@description) + "due: " +
@@ -37,4 +25,8 @@ class TodoItem
     format_progressBar(@current).to_s 
   end
 
+  def type
+    @@type
+  end
+  
 end
