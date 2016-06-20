@@ -24,7 +24,7 @@ end
     if index < 9
     @items.delete_at(index - 1) 
   else
-    raise UdaciListErrors::IndexExceedsListSizeError
+    raise UdaciListErrors::IndexExceedsListSizeError, "Index has exceeded list size"
   end
   end
 
@@ -53,7 +53,7 @@ end
   end 
 
   def change_due_date(index, due_date)
-    @items[index-1].change_due_date(due_date) if @items[index-1].type == 'todo'
+    @items[index-1].change_due_date(due_date) if @items[index-1].type == "todo"
   end
   
 end

@@ -11,7 +11,7 @@ class TodoItem
       if ['high','medium', 'low'].include? options[:priority]
         @priority = options[:priority]
       else
-        raise UdaciListErrors::InvalidPriorityValueError
+        raise UdaciListErrors::InvalidPriorityValueError, "Priority value is invalid"
       end
     end
   end
