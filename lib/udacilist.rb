@@ -43,17 +43,18 @@ end
     show_type
   end
 
-  #def delete_description(description)
-  #  delete = @items.delete_if {|item| item.description == description}
-  #  delete
-  #end
 
   def delete_more(indexes)
-    #indexes.sort { |x, y| y <=> x }
-    #puts indexes
+    indexes.sort { |x, y| y <=> x }
+    puts indexes
     indexes.each do |index|
       delete(index)
     end
-  end
+  end 
 
-end 
+  def change_due_date(index, due_date)
+    @items[index-1].change_due_date(due_date) if @items[index-1].type == 'todo'
+  end
+  
+end
+
