@@ -48,5 +48,11 @@ new_list.all
 # ------------------------
 new_list.filter("event")
 
+# NEW FEATURE
+# ------------------------
+
 new_list.delete_more([3, 4, 5])
+new_list.all
+
+new_list.change_due_date(1, "07/27/2016")
 new_list.all
