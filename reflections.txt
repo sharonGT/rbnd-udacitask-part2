@@ -1,13 +1,25 @@
 # What you added to Udacitask 2.0
 # -------------------------------------------------------
-1. What is the gem of your choice and how did you use it?
+1. What is the gem of your choice and how did you use it? 
+
+The gem of my choice is ‘formatador’. I used it to display progress bars for each task/event. It is to give a visual idea of how much of a task is completed at one glance. 
+
 2. Describe the 2 features you added to the project.
-  a) Feature 1...
-  b) Feature 2...
+  a) Feature 1
+This feature allows one to delete multiple items off the items array. 
+  b) Feature 2
+Feature 2 allows one to change the due date on the task/event. 
 
 # REFLECTIONS
 # -------------------------------------------------------
 1. How long did you spend working on this project?
+I spend about 10 days, 6 hours per day working on this project. 
+
 2. What was the most rewarding challenge you conquered?
+The most rewarding challenge will have to be incorporating the gem into this project. I spent a lot of time figuring out how to do so. 
+
 3. What two additional features did you build? Why?
+The two additional features were to allow user to change the due date or to delete multiple items off the items array. When a task is completed or an event has passed, one should be able to update the list, delete items and reduce clutter. I think change of due date is necessary because there can be a scenario that the user cannot finish the task on time due to unforeseen delays or other pressing priorities that needs to be completed first.
+
 4. Where do you still have room to grow?
+With knowledge of ruby gems has taken my learning to another level and i think there is plenty to learn and explore here. 
