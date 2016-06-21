@@ -21,7 +21,7 @@ class UdaciList
 end
 
   def delete(index)
-    if index < 9
+    if index < @items.length
     @items.delete_at(index - 1) 
   else
     raise UdaciListErrors::IndexExceedsListSizeError, "Index has exceeded list size"
